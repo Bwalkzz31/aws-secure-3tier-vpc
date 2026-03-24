@@ -52,17 +52,17 @@ The infrastructure consists of three layers:
 EC2 access was secured using SSH key authentication. Only a single trusted IP address was allowed to connect, ensuring controlled administrative access.
 
 See detailed configuration:
-- - [SSH Access Configuration](ssh-access-configuration.pdf)
+- [SSH Access Configuration](SSH_Access_Configuration_Final.pdf)
 
 ---
 
 ## Screenshots
 
 ### Web Server Deployment
-![Web Server](web-server-1.png)
+![Web Server](images/web-server-1.png)
 
 ### Architecture Diagram
-![Architecture](web-server-4.png)
+![Architecture](images/web-server-4.png)
 
 ---
 
