@@ -1,84 +1,98 @@
-AWS Secure 3-Tier Architecture and SSH Hardening.
+# AWS Secure 3-Tier Architecture and SSH Hardening
 
 ## Overview
+This project demonstrates how to design and deploy a secure 3-tier cloud infrastructure in AWS. Best practices were used to configure the environment with network segmentation, access control, and secure administrative access.
 
-The project illustrates how to design and deploy a secure 3-tier cloud infrastructure in AWS. Best practices were used to configure the environment with the network segmentation, access control, and more secure administrative access.
+The architecture isolates resources into public and private layers and implements least-privilege access using security groups and SSH.
 
-The architecture isolates resources into the public and private layers and implements least-privilege access using security groups and SSH.
+---
 
 ## Objective
-
 In order to create a secure AWS environment that:
 
-* Layer network (web, application, database) segmentation.
-* Denies unauthorized access with security groups.
-* Gains access to the administration using SSH keys.
-* Shows actual cloud security.
+- Segments network layers (web, application, database)
+- Prevents unauthorized access using security groups
+- Secures administrative access with SSH keys
+- Demonstrates real-world cloud security best practices
+
+---
 
 ## Architecture Design
+The infrastructure consists of three layers:
 
-The infrastructure has three levels:
+- **Public Subnet (Web Layer):** Hosts internet-facing resources  
+- **Private Subnet (Application Layer):** Handles internal application logic  
+- **Private Subnet (Database Layer):** Stores sensitive data securely with no public access  
 
-* **Public Subnet (Web Layer)– Houses resources that are internet-facing.
-* **Privatized Subnet (Application Layer) - Internal application logic.
-* **Private Subnet (Database Layer) The database layer is a secure storage of data without direct access by the population.
+---
 
 ## Key Features
 
-* Created a custom VPC with subnets.
-* Established security groups with least privilege access.
-* Enacted key-based authentication in gaining remote access with SSH keys.
-* SSH access to one trusted IP address.
-* Implemented and tested a web server on the public subnet.
-* Denied access to private resources.
+- Created a custom VPC with subnet segmentation
+- Configured security groups with least-privilege access
+- Implemented SSH key-based authentication
+- Restricted SSH access to a trusted IP address
+- Deployed and tested a web server on the public subnet
+- Blocked direct access to private resources
+
+---
 
 ## Security Implementation
 
-SSH access is limited to authorized IP.
-* Private key is kept in a safe location and is not shared.
-* Security groups in the form of virtual firewalls.
-* Network segmentation minimizes attack surface.
-* No open application or database layers.
+- SSH access restricted to authorized IP only
+- Private keys securely managed and not shared
+- Security groups act as virtual firewalls
+- Network segmentation reduces attack surface
+- No direct public access to application or database layers
+
+---
 
 ## SSH Configuration
 
-An EC2 access was secured with a key pair. Only a single IP address was allowed to enter into the environment via SSH, which guaranteed controlled administrative access to the environment.
+EC2 access was secured using SSH key authentication. Only a single trusted IP address was allowed to connect, ensuring controlled administrative access.
 
-📄 See detailed configuration:
+See detailed configuration:
+- `SSH_Access_Configuration_Final.pdf`
 
-* ssh-access-configuration.pdf
+---
 
 ## Screenshots
 
 ### Web Server Deployment
+![Web Server](images/web-server.png)
 
-![Web Server](screenshots/web-server.png)
+### Architecture Diagram
+![Architecture](images/architecture.png)
 
-The 3-tier architecture Diagram shown below presents a secure architecture implementation.
-
-![Architecture](architecture-diagram.png)
+---
 
 ## Technologies Used
 
-* AWS (VPC, EC2, Security Groups)
-Key-based Authentication (SSH) involves the use of keys to access a system or network.<|human|>* SSH (Key-Based Authentication)
-! Key-based Authentication (SSH) is a system or network that uses keys to access the system.
-* Concepts of Networking (CIDR, Subnets)
-Cloud Security Best Practices.
+- AWS (VPC, EC2, Subnets, Security Groups)
+- SSH (Key-Based Authentication)
+- Networking Concepts (CIDR, Subnetting)
+- Cloud Security Best Practices
+
+---
 
 ## Outcome
 
-This project reveals the capability to design and secure cloud infrastructure with the help of AWS. It emphasizes the abilities of network segmentation, access control, and secure system administration.
+This project demonstrates the ability to design and secure cloud infrastructure using AWS. It highlights skills in network segmentation, access control, and secure system administration.
+
+---
 
 ## Relevance
 
-The project applies to the work in:
+This project is relevant to roles in:
 
-* IT Support
-* Systems Administration
-* Cloud Engineering
-* Cybersecurity
+- IT Support
+- Systems Administration
+- Cloud Engineering
+- Cybersecurity
 
 ---
- Created by Britany Walker
-IT Support Systems Administration Cybersecurity.
+
+## Author
+
+**Britany Walker**  
+IT Support | Systems Administration | Cybersecurity
