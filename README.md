@@ -59,10 +59,10 @@ See detailed configuration:
 ## Screenshots
 
 ### Web Server Deployment
-![Web Server](images/web-server.png)
+![Web Server](web-server-1.png)
 
 ### Architecture Diagram
-![Architecture](images/architecture.png)
+![Architecture](web-server-4.png)
 
 ---
 
